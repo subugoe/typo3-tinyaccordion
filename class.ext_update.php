@@ -80,7 +80,7 @@ class ext_update
      *
      * @return string
      */
-    protected function generateOutput()
+    protected function generateOutput(): string
     {
         $out = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Messaging\Renderer\BootstrapRenderer::class);
 
