@@ -1,15 +1,5 @@
 <?php
 
-/***************************************************************
- * Extension Manager/Repository config file for ext "tinyaccordion".
- *
- * Auto generated 14-11-2016 15:47
- *
- * Manual updates:
- * Only the data in the array - everything else is removed by next
- * writing. "version" and "dependencies" must not be touched!
- ***************************************************************/
-
 $EM_CONF[$_EXTKEY] = [
     'title' => 'JavaScript Accordion based on TinyAccordion.',
     'description' => 'An easy to use extension to display pages, tt_content, tt_news or Camaliga elements as an Accordion. Runs with TinyAccordion or jQuery UI-Accordion.',
@@ -24,7 +14,8 @@ $EM_CONF[$_EXTKEY] = [
     'author_company' => '',
     'constraints' => [
         'depends' => [
-            'typo3' => '7.0.00-7.6.99',
+            'typo3' => '7.6.0-8.7.99',
+            'php' => '7.0.0-7.2.99'
         ],
         'conflicts' => [],
         'suggests' => [],

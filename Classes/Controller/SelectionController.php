@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace Quizpalme\Tinyaccordion\Controller;
 
 /***************************************************************
@@ -25,33 +28,33 @@ namespace Quizpalme\Tinyaccordion\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
+
 /**
  * TinyAccordion: Ausgabe der Dokumenten-Auswahl als Accordion
  *
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class SelectionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class SelectionController extends ActionController
 {
 
     /**
-     * @var Content Object
+     * @var ContentObjectRenderer Object
      */
     protected $cObj;
 
     /**
      * Parse a content element
-     *
-     * @param	int			UID of any content element
-     * @return 	string		Parsed Content Element
      */
-    public function myRender($table, $uid)
+    private function myRender(string $table, int $uid): string
     {
         $conf = [
             'tables' => $table,
             'source' => $uid,
             'dontCheckPid' => 1
         ];
-        //return $this->cObj->RECORDS($conf);
+
         return $this->cObj->cObjGetSingle('RECORDS', $conf);
     }
 
@@ -60,7 +63,7 @@ class SelectionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      *
      * @return string
      */
-    public function getPidAndInit()
+    private function getPidAndInit(): string
     {
         $this->cObj = $this->configurationManager->getContentObject();
 
@@ -85,12 +88,6 @@ class SelectionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         if (!$pid) {
             $pid = intval($GLOBALS['TSFE']->id);
         }
-
-        /*	JS-File will be included via TypoScript and page
-            if ($this->settings['jsFile']) {
-                $datei = str_replace('EXT:tinyaccordion/', t3lib_extMgm::siteRelPath('tinyaccordion'), $this->settings['jsFile']);
-                $GLOBALS['TSFE']->additionalHeaderData['tinyaccordion'] = '<script language="JavaScript" type="text/javascript" src="'.$datei.'"></script>';
-            } */
 
         return $pid;
     }
@@ -132,14 +129,15 @@ class SelectionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
                 $wherePid = 'pid IN (' . $pid . ')';
             }
             //
-            $res5 = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
+            $whereClause = $wherePid . $whereColPos . $whereCType .
+                                    ' AND sys_language_uid=' . (int) $GLOBALS['TSFE']->sys_language_uid . $this->cObj->enableFields('tt_content');
 
+            $res5 = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
                 'pid, uid, header, tstamp',
-                    'tt_content',
-                    $wherePid . $whereColPos . $whereCType .
-                        ' AND sys_language_uid=' . intval($GLOBALS['TSFE']->sys_language_uid) . $this->cObj->enableFields('tt_content'),
-                    '',
-                    'sorting ' . $order
+                'tt_content',
+                $whereClause,
+                '',
+                'sorting ' . $order
 
             );
             if ($GLOBALS['TYPO3_DB']->sql_num_rows($res5)>0) {

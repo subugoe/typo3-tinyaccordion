@@ -1,29 +1,26 @@
-<f:layout name="Default" />
+<div class="tx-tinyaccordion-pi1">
+	<f:flashMessages />
 
-<f:section name="main">
-<f:flashMessages />
-
-<f:if condition="{nodata}">
-<f:then>
-<p>Error: no data found!</p>
-</f:then>
-<f:else>
-<ul class="tinyaccordion" id="tinyaccordion{uid}">
-  <f:for each="{elements}" as="element">
-	<li class="acc-li">
-		<{settings.flexform.header1}>{element.header}</{settings.flexform.header1}>
-		<div class="acc-section"><f:format.raw>{element.bodytext}</f:format.raw></div>
-	</li>
-  </f:for>
-</ul>
-<script type="text/javascript">
-var tinyaccordion{uid}=new TINY.accordion.slider("tinyaccordion{uid}");
-tinyaccordion{uid}.init("tinyaccordion{uid}","{settings.flexform.header1}",{settings.flexform.expandable1},{settings.flexform.index1},"acc-selected");
-</script>
-</f:else>
-</f:if>
-
-</f:section>
+	<f:if condition="{nodata}">
+		<f:then>
+			<p>Error: no data found!</p>
+		</f:then>
+		<f:else>
+			<ul class="tinyaccordion" id="tinyaccordion{uid}">
+	  			<f:for each="{elements}" as="element">
+					<li class="acc-li">
+						<{settings.flexform.header1}>{element.header}</{settings.flexform.header1}>
+						<div class="acc-section"><f:format.raw>{element.bodytext}</f:format.raw></div>
+					</li>
+	  			</f:for>
+			</ul>
+			<script type="text/javascript">
+				var tinyaccordion{uid}=new TINY.accordion.slider("tinyaccordion{uid}");
+				tinyaccordion{uid}.init("tinyaccordion{uid}","{settings.flexform.header1}",{settings.flexform.expandable1},{settings.flexform.index1},"acc-selected");
+			</script>
+		</f:else>
+	</f:if>
+</div>
 
 
 <f:comment>

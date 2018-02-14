@@ -20,7 +20,7 @@ call_user_func(
 			wizards.newContentElement.wizardItems.plugins {
 				elements {
 					pi1 {
-						icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extKey) . 'Resources/Public/Icons/ce_wiz.gif
+						icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath($extKey) . 'Resources/Public/Icons/ce_wiz.gif
 						title = LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:tinyaccordion_title
 						description = LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:tinyaccordion_plus_wiz_description
 						tt_content_defValues {

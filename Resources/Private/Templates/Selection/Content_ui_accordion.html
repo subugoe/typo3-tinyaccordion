@@ -1,34 +1,31 @@
-<f:layout name="Default" />
+<div class="tx-tinyaccordion-pi1">
+    <f:flashMessages />
 
-<f:section name="main">
-<f:flashMessages />
+    <f:if condition="{nodata}">
+    <f:then>
+    <p>Error: no data found!</p>
+    </f:then>
+    <f:else>
+    <div id="accordion{uid}">
+      <f:for each="{elements}" as="element" iteration="objIterator">
+        <{settings.flexform.header1}>{element.header} <span class="t-small"> &gt;&gt; {f:translate(key: 'click')} &lt;&lt; </span></{settings.flexform.header1}>
+        <div class="accordion-section">
+          <f:format.raw>{element.bodytext}</f:format.raw>
+        </div>
+      </f:for>
+    </div>
 
-<f:if condition="{nodata}">
-<f:then>
-<p>Error: no data found!</p>
-</f:then>
-<f:else>
-<div id="accordion{uid}">
-  <f:for each="{elements}" as="element" iteration="objIterator">
-	<{settings.flexform.header1}>{element.header} <span class="t-small"> &gt;&gt; {f:translate(key: 'click')} &lt;&lt; </span></{settings.flexform.header1}>
-	<div class="accordion-section">
-	  <f:format.raw>{element.bodytext}</f:format.raw>
-	</div>
-  </f:for>
+    <script type="text/javascript">
+    $(function() {
+        $( "#accordion{uid}" ).accordion();
+        $( "#accordion{uid}" ).accordion( "option", "heightStyle", "content" );
+        $( "#accordion{uid}" ).accordion( "option", "collapsible", true );
+        $( "#accordion{uid}" ).accordion( "option", "active", false );
+    });
+    </script>
+    </f:else>
+    </f:if>
 </div>
-
-<script type="text/javascript">
-$(function() {
-	$( "#accordion{uid}" ).accordion();
-	$( "#accordion{uid}" ).accordion( "option", "heightStyle", "content" );
-	$( "#accordion{uid}" ).accordion( "option", "collapsible", true );
-	$( "#accordion{uid}" ).accordion( "option", "active", false );
-});
-</script>
-</f:else>
-</f:if>
-
-</f:section>
 
 
 <f:comment>
@@ -44,11 +41,11 @@ Note 2: you can use this template with this TypoScript:
 page {
 # Remove default JavaScript
   page.includeJS.tx_tinyaccordion >
-  
+
 # Download the jQuery UI-styles and customise them...
   headerData.36 = TEXT
   headerData.36.value = <link rel="stylesheet" type="text/css" href="fileadmin/templates/css/jquery-ui.css" media="all">
-  
+
 # Use this lines or the JavaScript-lines above. The example works with this lines better:
 #  headerData.37 = TEXT
 #  headerData.37.value = <script type="text/javascript"> $(function() {  $( "#accordion" ).accordion( { collapsible: true, autoHeight: false, active: false } ); }); </script>

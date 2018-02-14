@@ -1,52 +1,51 @@
-<f:layout name="Default" />
+<div class="tx-tinyaccordion-pi1">
 
-<f:section name="main">
-<f:flashMessages />
+	<f:flashMessages />
 
-<f:if condition="{nodata}">
-<f:then>
-<p>Error: no data found!</p>
-</f:then>
-<f:else>
-<ul class="tinyaccordion" id="tinyaccordion{uid}">
-<f:for each="{elements}" as="element" iteration="objIterator">
-	<li class="acc-li">
-		<{settings.flexform.header1}>{element.header}</{settings.flexform.header1}>
-		<div class="acc-section">
-			<ul class="tinyaccordion" id="tinyaccordion{uid}p{objIterator.cycle}">
-			  <f:for each="{element.camaliga}" as="camaliga">
-			  	<li class="acc-li">
-			  		<{settings.flexform.header2}>{camaliga.header}</{settings.flexform.header2}>
-					<div class="acc-section">
-						<f:if condition="{camaliga.shortdesc} != ''"><p><f:format.nl2br>{camaliga.shortdesc}</f:format.nl2br></p></f:if>
-						<f:format.raw>{camaliga.longdesc}</f:format.raw>
-						<f:if condition="{camaliga.link} != ''"><p>Link:
-							<f:if condition="{camaliga.link} > 0">
-								<f:then><f:link.page pageUid="{camaliga.link}" class="internal-link">Internal link</f:link.page></f:then>
-								<f:else><f:link.external uri="{camaliga.link}" class="external-link-new-window">{camaliga.link}</f:link.external></f:else>
-							</f:if>
-						</p></f:if>
-					</div>
-				</li>
-			  </f:for>
-			</ul>
-		</div>
-	</li>
-  </f:for>
-</ul>
-<script type="text/javascript">
-var parentAccordion{uid} = new TINY.accordion.slider("parentAccordion{uid}");
-parentAccordion{uid}.init("tinyaccordion{uid}","{settings.flexform.header1}",{settings.flexform.expandable1},{settings.flexform.index1},"acc-selected");
+	<f:if condition="{nodata}">
+	<f:then>
+	<p>Error: no data found!</p>
+	</f:then>
+	<f:else>
+	<ul class="tinyaccordion" id="tinyaccordion{uid}">
+	<f:for each="{elements}" as="element" iteration="objIterator">
+		<li class="acc-li">
+			<{settings.flexform.header1}>{element.header}</{settings.flexform.header1}>
+			<div class="acc-section">
+				<ul class="tinyaccordion" id="tinyaccordion{uid}p{objIterator.cycle}">
+				  <f:for each="{element.camaliga}" as="camaliga">
+					<li class="acc-li">
+						<{settings.flexform.header2}>{camaliga.header}</{settings.flexform.header2}>
+						<div class="acc-section">
+							<f:if condition="{camaliga.shortdesc} != ''"><p><f:format.nl2br>{camaliga.shortdesc}</f:format.nl2br></p></f:if>
+							<f:format.raw>{camaliga.longdesc}</f:format.raw>
+							<f:if condition="{camaliga.link} != ''"><p>Link:
+								<f:if condition="{camaliga.link} > 0">
+									<f:then><f:link.page pageUid="{camaliga.link}" class="internal-link">Internal link</f:link.page></f:then>
+									<f:else><f:link.external uri="{camaliga.link}" class="external-link-new-window">{camaliga.link}</f:link.external></f:else>
+								</f:if>
+							</p></f:if>
+						</div>
+					</li>
+				  </f:for>
+				</ul>
+			</div>
+		</li>
+	  </f:for>
+	</ul>
+	<script type="text/javascript">
+	var parentAccordion{uid} = new TINY.accordion.slider("parentAccordion{uid}");
+	parentAccordion{uid}.init("tinyaccordion{uid}","{settings.flexform.header1}",{settings.flexform.expandable1},{settings.flexform.index1},"acc-selected");
 
-<f:for each="{elements}" as="element" iteration="objIterator">
-  var nestedAccordion{uid}p{objIterator.cycle} = new TINY.accordion.slider("nestedAccordion{uid}p{objIterator.cycle}");
-  nestedAccordion{uid}p{objIterator.cycle}.init("tinyaccordion{uid}p{objIterator.cycle}","{settings.flexform.header2}",{settings.flexform.expandable2},{settings.flexform.index2},"acc-selected");
-</f:for>
-</script>
-</f:else>
-</f:if>
+	<f:for each="{elements}" as="element" iteration="objIterator">
+	  var nestedAccordion{uid}p{objIterator.cycle} = new TINY.accordion.slider("nestedAccordion{uid}p{objIterator.cycle}");
+	  nestedAccordion{uid}p{objIterator.cycle}.init("tinyaccordion{uid}p{objIterator.cycle}","{settings.flexform.header2}",{settings.flexform.expandable2},{settings.flexform.index2},"acc-selected");
+	</f:for>
+	</script>
+	</f:else>
+	</f:if>
 
-</f:section>
+</div>
 
 
 <f:comment>
