@@ -2,7 +2,7 @@
     "name": "subugoe/tinyaccordion",
     "description": "TYPO3 Accordion extension",
     "type": "typo3-cms-extension",
-    "license": "GPLv2",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Kurt Gusbeth",
