@@ -1,0 +1,72 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+<f:flashMessages />
+
+<f:if condition="{nodata}">
+<f:then>
+<p>Error: no data found!</p>
+</f:then>
+<f:else>
+<div id="accordion{uid}">
+  <f:for each="{elements}" as="element" iteration="objIterator">
+	<{settings.flexform.header1}>{element.header} <span class="t-small"> &gt;&gt; {f:translate(key: 'click')} &lt;&lt; </span></{settings.flexform.header1}>
+	<div class="accordion-section">
+	  <f:for each="{element.camaliga}" as="camaliga">
+		<{settings.flexform.header2}>{camaliga.header}</{settings.flexform.header2}>
+		<f:if condition="{camaliga.shortdesc} != ''"><p><f:format.nl2br>{camaliga.shortdesc}</f:format.nl2br></p></f:if>
+		<f:format.raw>{camaliga.longdesc}</f:format.raw>
+		<f:if condition="{camaliga.link} != ''"><p>Link:
+			<f:if condition="{camaliga.link} > 0">
+				<f:then><f:link.page pageUid="{camaliga.link}" class="internal-link">Internal link</f:link.page></f:then>
+				<f:else><f:link.external uri="{camaliga.link}" class="external-link-new-window">{camaliga.link}</f:link.external></f:else>
+			</f:if>
+		</p></f:if>
+		<hr />
+	  </f:for>
+	</div>
+  </f:for>
+</div>
+
+<script type="text/javascript">
+$(function() {
+	$( "#accordion{uid}" ).accordion();
+	$( "#accordion{uid}" ).accordion( "option", "heightStyle", "content" );
+	$( "#accordion{uid}" ).accordion( "option", "collapsible", true );
+});
+</script>
+</f:else>
+</f:if>
+
+</f:section>
+
+
+<f:comment>
+Note 1: you can use the {pids} array too.
+
+Note 2: you can use this template with this TypoScript:
+
+# Include jQuery with UI Accordion
+# includeLibs.t3jquery = EXT:t3jquery/class.tx_t3jquery.php
+# page.13 = USER
+# page.13.userFunc = tx_t3jquery->addJqJS
+
+page {
+# Remove default JavaScript
+  page.includeJS.tx_tinyaccordion >
+  
+# Download the jQuery UI-styles and customise them...
+  headerData.36 = TEXT
+  headerData.36.value = <link rel="stylesheet" type="text/css" href="fileadmin/templates/css/jquery-ui.css" media="all">
+  
+# Use this lines or the JavaScript-lines above. The example works with this lines better:
+#  headerData.37 = TEXT
+#  headerData.37.value = <script type="text/javascript"> $(function() {  $( "#accordion" ).accordion( { collapsible: true, autoHeight: false, active: false } ); }); </script>
+}
+
+# Remove default Styles
+plugin.tx_tinyaccordion._CSS_DEFAULT_STYLE >
+
+# Copy this file in the directory fileadmin/templates/files/Selection/ and use it with this TS, if you want to modify this file:
+plugin.tx_tinyaccordion.view.templateRootPaths.1 = fileadmin/templates/files/
+</f:comment>

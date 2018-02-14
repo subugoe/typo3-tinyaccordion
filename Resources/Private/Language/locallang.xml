@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the JavaScript Accordion based on TinyAccordion extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_tinyaccordion_domain_model_auswahl">Selection</label>
+			<label index="click">click here</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tx_tinyaccordion_domain_model_auswahl">Auswahl</label>
+			<label index="click">hier klicken</label>
+		</languageKey>
+	</data>
+</T3locallang>

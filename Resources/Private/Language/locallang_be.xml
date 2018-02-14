@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for backend of tinyaccordion</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tinyaccordion_title">TinyAccordion</label>
+			<label index="tinyaccordion_plus_wiz_description">Extension to display tt_content or tt_news elements as an Accordion.</label>
+
+			<!-- Flexforms -->
+			<label index="flexforms_tab.settings">Settings</label>
+			<label index="flexforms_tab.level1">Level 1</label>
+			<label index="flexforms_tab.level2">Level 2</label>
+
+			<label index="flexforms_general.mode">What to display</label>
+			<label index="flexforms_general.sort">Order direction</label>
+			<label index="flexforms_general.sortMode">First sort by selected pages?</label>
+			<label index="flexforms_general.ascending">ascending</label>
+			<label index="flexforms_general.descending">descending</label>
+			<label index="flexforms_general.header">Header</label>
+			<label index="flexforms_general.expandable">Should the panel be expandable independently?</label>
+			<label index="flexforms_general.select">pages: use the pid or uid when selecting from pages?</label>
+			<label index="flexforms_general.pid">select childs (pid)</label>
+			<label index="flexforms_general.uid">select elements themself (uid)</label>
+			<label index="flexforms_general.nested">pages: show nested elements when selecting from pages pages?</label>
+			<label index="flexforms_general.renderEverything">tt_content: render all elements (yes) or only text- and image-elements?</label>
+			<label index="flexforms_general.colPos">tt_content: colPos-column (-1 = all columns)</label>
+			<label index="flexforms_general.no">no</label>
+			<label index="flexforms_general.yes">yes</label>
+			<label index="flexforms_general.index">Index of the initially expanded section</label>
+			<label index="flexforms_general.none">none</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tinyaccordion_title">TinyAccordion</label>
+			<label index="tinyaccordion_plus_wiz_description">Extension zum anzeigen von tt_content- oder tt_news-Elementen als ein Accordion.</label>
+
+			<!-- Flexforms -->
+			<label index="flexforms_tab.settings">Einstellungen</label>
+			<label index="flexforms_tab.level1">Ebene 1</label>
+			<label index="flexforms_tab.level2">Ebene 2</label>
+
+			<label index="flexforms_general.mode">Was soll angezeigt werden?</label>
+			<label index="flexforms_general.sort">Sortierreihenfolge</label>
+			<label index="flexforms_general.sortMode">Zuerst nach den ausgewählten Seiten sortieren?</label>
+			<label index="flexforms_general.ascending">aufsteigend</label>
+			<label index="flexforms_general.descending">absteigend</label>
+			<label index="flexforms_general.header">Überschrift</label>
+			<label index="flexforms_general.expandable">Immer nur max. 1 Panel offen halten?</label>
+			<label index="flexforms_general.select">Bei pages: die ausgesuchten Seiten oder deren Kinder holen?</label>
+			<label index="flexforms_general.pid">suche die Kinder (pid)</label>
+			<label index="flexforms_general.uid">suche die Seiten selbst (uid)</label>
+			<label index="flexforms_general.nested">Bei pages: verschachtele die Elemente einer Seite?</label>
+			<label index="flexforms_general.renderEverything">Bei tt_content: alles holen (ja) oder nur Text- und Bild-Elemente (nein)?</label>
+			<label index="flexforms_general.colPos">Bei tt_content: colPos-Spalte (-1 = alle Spalten)</label>
+			<label index="flexforms_general.no">nein</label>
+			<label index="flexforms_general.yes">ja</label>
+			<label index="flexforms_general.index">Welches Element soll am Anfang offen sein?</label>
+			<label index="flexforms_general.none">keines</label>
+		</languageKey>
+	</data>
+</T3locallang>

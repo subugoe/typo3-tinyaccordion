@@ -1,0 +1,56 @@
+plugin.tx_tinyaccordion {
+	view {
+		templateRootPaths {
+			0 = EXT:tinyaccordion/Resources/Private/Templates/
+			1 = {$plugin.tx_tinyaccordion.view.templateRootPath}
+		}
+		partialRootPaths {
+			0 = EXT:tinyaccordion/Resources/Private/Partials/
+			1 = {$plugin.tx_tinyaccordion.view.partialRootPath}
+		}
+		layoutRootPaths {
+			0 = EXT:tinyaccordion/Resources/Private/Layouts/
+			1 = {$plugin.tx_tinyaccordion.view.layoutRootPath}
+		}
+	}
+	persistence {
+		storagePid =
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		rewrittenPropertyMapper = 1
+	}
+	settings {
+		# Not in use (configure it via page.includeJS):
+		# jsFile = {$plugin.tx_tinyaccordion.settings.jsFile}
+		# Not in use (configure it via FlexForms):
+		# table = tt_content
+		# The following settings are needed only for the initial step
+		flexform.header1 = h4
+		flexform.expandable1 = 0
+		flexform.index1 = -1
+		flexform.header2 = h4
+		flexform.expandable2 = 1
+		flexform.index2 = -1
+		flexform.select = pid
+		flexform.colPos = -1
+		flexform.nested = 0
+		flexform.renderEverything = 0
+	}
+}
+
+plugin.tx_tinyaccordion._CSS_DEFAULT_STYLE (
+	ul.tinyaccordion {list-style:none; background:none !important;}
+	ul.tinyaccordion li {background:none !important; padding-left:0px;}
+	ul.tinyaccordion h4 {margin: 0 0 6px 0;padding-left:20px; cursor:pointer; background: url('/typo3conf/ext/tinyaccordion/Resources/Public/Images/plus.png') no-repeat 0 3px;}
+	ul.tinyaccordion h4.acc-selected {background: url('/typo3conf/ext/tinyaccordion/Resources/Public/Images/minus.png') no-repeat 0 7px;}
+	ul.tinyaccordion h4:hover {text-decoration:underline;}
+	ul.tinyaccordion .acc-section {overflow:hidden;}
+	ul.tinyaccordion .csc-default,
+	ul.tinyaccordion ul.tinyaccordion,
+	ul.tinyaccordion ul.tinyaccordion .news-single-item {padding: 0 0 10px 21px;}
+	ul.tinyaccordion li .csc-header:first-child {display:none;}
+)
+
+# Use this to include the JavaScript-File:
+page.includeJS.tx_tinyaccordion = {$plugin.tx_tinyaccordion.settings.jsFile}

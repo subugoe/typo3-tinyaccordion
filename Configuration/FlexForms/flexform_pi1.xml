@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+  <sheets>
+    <sDEF>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_tab.settings</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+          <switchableControllerActions>
+          <TCEforms>
+          <label>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.mode</label>
+          <config>
+          <type>select</type>
+          <items>
+            <numIndex index="0">
+                <numIndex index="0">tt_content + TinyAccordion</numIndex>
+                <numIndex index="1">Selection->content</numIndex>
+            </numIndex>
+            <numIndex index="1">
+                <numIndex index="0">tt_content + UI-Accordion</numIndex>
+                <numIndex index="1">Selection->content_ui_accordion</numIndex>
+            </numIndex>
+            <numIndex index="2">
+                <numIndex index="0">pages + tt_content + TinyAccordion</numIndex>
+                <numIndex index="1">Selection->pages</numIndex>
+            </numIndex>
+            <numIndex index="3">
+                <numIndex index="0">pages + tt_content + UI-Accordion</numIndex>
+                <numIndex index="1">Selection->pages_ui_accordion</numIndex>
+            </numIndex>
+            <numIndex index="5">
+                <numIndex index="0">tt_news + TinyAccordion</numIndex>
+                <numIndex index="1">Selection->news</numIndex>
+            </numIndex>
+            <numIndex index="6">
+                <numIndex index="0">tt_news + UI-Accordion</numIndex>
+                <numIndex index="1">Selection->news_ui_accordion</numIndex>
+            </numIndex>
+            <numIndex index="10">
+                <numIndex index="0">Camaliga + TinyAccordion</numIndex>
+                <numIndex index="1">Selection->camaliga</numIndex>
+            </numIndex>
+            <numIndex index="11">
+                <numIndex index="0">Camaliga + UI-Accordion</numIndex>
+                <numIndex index="1">Selection->camaliga_ui_accordion</numIndex>
+            </numIndex>
+            </items>
+          </config>
+          </TCEforms>
+         </switchableControllerActions>
+         <settings.flexform.sortMode>
+          <TCEforms>
+          <label>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.sortMode</label>
+          <config>
+          <type>select</type>
+          <items>
+            <numIndex index="0">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.no</numIndex>
+                <numIndex index="1">0</numIndex>
+            </numIndex>
+            <numIndex index="1">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.yes</numIndex>
+                <numIndex index="1">1</numIndex>
+            </numIndex>
+            </items>
+          </config>
+          </TCEforms>
+         </settings.flexform.sortMode>
+         <settings.flexform.sortorder>
+          <TCEforms>
+          <label>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.sort</label>
+          <config>
+          <type>select</type>
+          <items>
+            <numIndex index="0">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.ascending</numIndex>
+                <numIndex index="1">asc</numIndex>
+            </numIndex>
+            <numIndex index="1">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.descending</numIndex>
+                <numIndex index="1">desc</numIndex>
+            </numIndex>
+            </items>
+          </config>
+          </TCEforms>
+         </settings.flexform.sortorder>
+         <settings.flexform.select>
+          <TCEforms>
+          <label>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.select</label>
+          <config>
+          <type>select</type>
+          <items>
+            <numIndex index="0">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.pid</numIndex>
+                <numIndex index="1">pid</numIndex>
+            </numIndex>
+            <numIndex index="1">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.uid</numIndex>
+                <numIndex index="1">uid</numIndex>
+            </numIndex>
+            </items>
+          </config>
+          </TCEforms>
+         </settings.flexform.select>
+         <settings.flexform.nested>
+          <TCEforms>
+          <label>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.nested</label>
+          <config>
+          <type>select</type>
+          <items>
+            <numIndex index="0">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.no</numIndex>
+                <numIndex index="1">0</numIndex>
+            </numIndex>
+            <numIndex index="1">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.yes</numIndex>
+                <numIndex index="1">1</numIndex>
+            </numIndex>
+            </items>
+          </config>
+          </TCEforms>
+         </settings.flexform.nested>
+         <settings.flexform.renderEverything>
+          <TCEforms>
+          <label>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.renderEverything</label>
+          <config>
+          <type>select</type>
+          <items>
+            <numIndex index="0">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.no</numIndex>
+                <numIndex index="1">0</numIndex>
+            </numIndex>
+            <numIndex index="1">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.yes</numIndex>
+                <numIndex index="1">1</numIndex>
+            </numIndex>
+            </items>
+          </config>
+          </TCEforms>
+         </settings.flexform.renderEverything>
+		 <settings.flexform.colPos>
+          <TCEforms>
+           <label>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.colPos</label>
+           <config>
+                    <type>input</type>
+                    <size>5</size>
+                    <max>5</max>
+                    <eval>trim</eval>
+           </config>
+          </TCEforms>
+		 </settings.flexform.colPos>
+        </el>
+      </ROOT>
+    </sDEF>
+    <sLevel1>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_tab.level1</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+         <settings.flexform.header1>
+          <TCEforms>
+          <label>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.header</label>
+          <config>
+          <type>select</type>
+          <items>
+            <numIndex index="0">
+                <numIndex index="0">H1</numIndex>
+                <numIndex index="1">h1</numIndex>
+            </numIndex>
+            <numIndex index="1">
+                <numIndex index="0">H2</numIndex>
+                <numIndex index="1">h2</numIndex>
+            </numIndex>
+            <numIndex index="2">
+                <numIndex index="0">H3</numIndex>
+                <numIndex index="1">h3</numIndex>
+            </numIndex>
+            <numIndex index="3">
+                <numIndex index="0">H4</numIndex>
+                <numIndex index="1">h4</numIndex>
+            </numIndex>
+            <numIndex index="4">
+                <numIndex index="0">H5</numIndex>
+                <numIndex index="1">h5</numIndex>
+            </numIndex>
+            <numIndex index="5">
+                <numIndex index="0">H6</numIndex>
+                <numIndex index="1">h6</numIndex>
+            </numIndex>
+            </items>
+            <minitems>1</minitems>
+            <maxitems>1</maxitems>
+            <size>1</size>
+            <default>h4</default>
+          </config>
+          </TCEforms>
+         </settings.flexform.header1>
+         <settings.flexform.expandable1>
+          <TCEforms>
+          <label>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.expandable</label>
+          <config>
+          <type>select</type>
+          <items>
+            <numIndex index="0">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.no</numIndex>
+                <numIndex index="1">0</numIndex>
+            </numIndex>
+            <numIndex index="1">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.yes</numIndex>
+                <numIndex index="1">1</numIndex>
+            </numIndex>
+            </items>
+            <minitems>1</minitems>
+            <maxitems>1</maxitems>
+            <size>1</size>
+            <default>0</default>
+          </config>
+          </TCEforms>
+         </settings.flexform.expandable1>
+         <settings.flexform.index1>
+          <TCEforms>
+          <label>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.index</label>
+          <config>
+          <type>select</type>
+          <items>
+            <numIndex index="0">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.none</numIndex>
+                <numIndex index="1">-1</numIndex>
+            </numIndex>
+            <numIndex index="1">
+                <numIndex index="0">No. 1</numIndex>
+                <numIndex index="1">0</numIndex>
+            </numIndex>
+            <numIndex index="2">
+                <numIndex index="0">No. 2</numIndex>
+                <numIndex index="1">1</numIndex>
+            </numIndex>
+            <numIndex index="3">
+                <numIndex index="0">No. 3</numIndex>
+                <numIndex index="1">2</numIndex>
+            </numIndex>
+            <numIndex index="4">
+                <numIndex index="0">No. 4</numIndex>
+                <numIndex index="1">3</numIndex>
+            </numIndex>
+            <numIndex index="5">
+                <numIndex index="0">No. 5</numIndex>
+                <numIndex index="1">4</numIndex>
+            </numIndex>
+            <numIndex index="6">
+                <numIndex index="0">No. 6</numIndex>
+                <numIndex index="1">5</numIndex>
+            </numIndex>
+            <numIndex index="7">
+                <numIndex index="0">No. 7</numIndex>
+                <numIndex index="1">6</numIndex>
+            </numIndex>
+            <numIndex index="8">
+                <numIndex index="0">No. 8</numIndex>
+                <numIndex index="1">7</numIndex>
+            </numIndex>
+            <numIndex index="9">
+                <numIndex index="0">No. 9</numIndex>
+                <numIndex index="1">8</numIndex>
+            </numIndex>
+            <numIndex index="10">
+                <numIndex index="0">No. 10</numIndex>
+                <numIndex index="1">9</numIndex>
+            </numIndex>
+            <numIndex index="11">
+                <numIndex index="0">No. 11</numIndex>
+                <numIndex index="1">10</numIndex>
+            </numIndex>
+            </items>
+            <minitems>1</minitems>
+            <maxitems>1</maxitems>
+            <size>1</size>
+          </config>
+          </TCEforms>
+         </settings.flexform.index1>
+        </el>
+      </ROOT>
+    </sLevel1>
+    <sLevel2>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_tab.level2</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+         <settings.flexform.header2>
+          <TCEforms>
+          <label>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.header</label>
+          <config>
+          <type>select</type>
+          <items>
+            <numIndex index="0">
+                <numIndex index="0">H1</numIndex>
+                <numIndex index="1">h1</numIndex>
+            </numIndex>
+            <numIndex index="1">
+                <numIndex index="0">H2</numIndex>
+                <numIndex index="1">h2</numIndex>
+            </numIndex>
+            <numIndex index="2">
+                <numIndex index="0">H3</numIndex>
+                <numIndex index="1">h3</numIndex>
+            </numIndex>
+            <numIndex index="3">
+                <numIndex index="0">H4</numIndex>
+                <numIndex index="1">h4</numIndex>
+            </numIndex>
+            <numIndex index="4">
+                <numIndex index="0">H5</numIndex>
+                <numIndex index="1">h5</numIndex>
+            </numIndex>
+            <numIndex index="5">
+                <numIndex index="0">H6</numIndex>
+                <numIndex index="1">h6</numIndex>
+            </numIndex>
+            </items>
+            <minitems>1</minitems>
+            <maxitems>1</maxitems>
+            <size>1</size>
+            <default>h4</default>
+          </config>
+          </TCEforms>
+         </settings.flexform.header2>
+         <settings.flexform.expandable2>
+          <TCEforms>
+          <label>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.expandable</label>
+          <config>
+          <type>select</type>
+          <items>
+            <numIndex index="0">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.no</numIndex>
+                <numIndex index="1">0</numIndex>
+            </numIndex>
+            <numIndex index="1">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.yes</numIndex>
+                <numIndex index="1">1</numIndex>
+            </numIndex>
+            </items>
+            <minitems>1</minitems>
+            <maxitems>1</maxitems>
+            <size>1</size>
+            <default>1</default>
+          </config>
+          </TCEforms>
+         </settings.flexform.expandable2>
+         <settings.flexform.index2>
+          <TCEforms>
+          <label>LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.index</label>
+          <config>
+          <type>select</type>
+          <items>
+            <numIndex index="0">
+                <numIndex index="0">LLL:EXT:tinyaccordion/Resources/Private/Language/locallang_be.xml:flexforms_general.none</numIndex>
+                <numIndex index="1">-1</numIndex>
+            </numIndex>
+            <numIndex index="1">
+                <numIndex index="0">No. 1</numIndex>
+                <numIndex index="1">0</numIndex>
+            </numIndex>
+            <numIndex index="2">
+                <numIndex index="0">No. 2</numIndex>
+                <numIndex index="1">1</numIndex>
+            </numIndex>
+            <numIndex index="3">
+                <numIndex index="0">No. 3</numIndex>
+                <numIndex index="1">2</numIndex>
+            </numIndex>
+            <numIndex index="4">
+                <numIndex index="0">No. 4</numIndex>
+                <numIndex index="1">3</numIndex>
+            </numIndex>
+            <numIndex index="5">
+                <numIndex index="0">No. 5</numIndex>
+                <numIndex index="1">4</numIndex>
+            </numIndex>
+            <numIndex index="6">
+                <numIndex index="0">No. 6</numIndex>
+                <numIndex index="1">5</numIndex>
+            </numIndex>
+            <numIndex index="7">
+                <numIndex index="0">No. 7</numIndex>
+                <numIndex index="1">6</numIndex>
+            </numIndex>
+            <numIndex index="8">
+                <numIndex index="0">No. 8</numIndex>
+                <numIndex index="1">7</numIndex>
+            </numIndex>
+            <numIndex index="9">
+                <numIndex index="0">No. 9</numIndex>
+                <numIndex index="1">8</numIndex>
+            </numIndex>
+            <numIndex index="10">
+                <numIndex index="0">No. 10</numIndex>
+                <numIndex index="1">9</numIndex>
+            </numIndex>
+            <numIndex index="11">
+                <numIndex index="0">No. 11</numIndex>
+                <numIndex index="1">10</numIndex>
+            </numIndex>
+            </items>
+            <minitems>1</minitems>
+            <maxitems>1</maxitems>
+            <size>1</size>
+          </config>
+          </TCEforms>
+         </settings.flexform.index2>
+        </el>
+      </ROOT>
+    </sLevel2>
+  </sheets>
+</T3DataStructure>

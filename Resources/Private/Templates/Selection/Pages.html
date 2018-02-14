@@ -1,0 +1,55 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+<f:flashMessages />
+
+<f:if condition="{nodata}">
+<f:then>
+	<p>Error: no data found!</p>
+</f:then>
+<f:else>
+	<ul class="tinyaccordion" id="tinyaccordion{uid}">
+	  <f:for each="{pages}" as="page" key="pageid" iteration="objIterator">
+		<li class="acc-li">
+			<{settings.flexform.header1}>{page.title} <span class="t-small"> &gt;&gt; {f:translate(key: 'click')} &lt;&lt; </span></{settings.flexform.header1}>
+			<div class="acc-section">
+			  <f:if condition="{settings.flexform.nested}">
+			  <f:then>
+				<ul class="tinyaccordion" id="tinyaccordion{pageid}">
+				  <f:for each="{page.elements}" as="element">
+				  	<li class="acc-li">
+				  		<{settings.flexform.header2}>{element.header} <span class="t-small"> &gt;&gt; {f:translate(key: 'click')} &lt;&lt; </span></{settings.flexform.header2}>
+						<div class="acc-section"><f:format.raw>{element.bodytext}</f:format.raw></div>
+					</li>
+				  </f:for>
+				</ul>
+			  </f:then>
+			  <f:else>
+				<f:for each="{page.elements}" as="element">
+					<f:format.raw>{element.bodytext}</f:format.raw>
+		  		</f:for>
+		  	  </f:else>
+		  	  </f:if>
+			</div>
+		</li>
+	  </f:for>
+	</ul>
+	<script type="text/javascript">
+		var tinyaccordion{uid}=new TINY.accordion.slider("tinyaccordion{uid}");
+		tinyaccordion{uid}.init("tinyaccordion{uid}","{settings.flexform.header1}",{settings.flexform.expandable1},{settings.flexform.index1},"acc-selected");
+		<f:if condition="{settings.flexform.nested}">
+		<f:for each="{pages}" as="page" key="pageid" iteration="objIterator">
+		  var tinyaccordion{pageid}=new TINY.accordion.slider("tinyaccordion{pageid}");
+		  tinyaccordion{pageid}.init("tinyaccordion{pageid}","{settings.flexform.header2}",{settings.flexform.expandable2},{settings.flexform.index2},"acc-selected");
+		</f:for>
+		</f:if>
+	</script>
+</f:else>
+</f:if>
+
+</f:section>
+
+
+<f:comment>
+Note: you can use the {pids} array, {page.subtitle}, {page.abstract} and {page.description} and {element.header} too.
+</f:comment>

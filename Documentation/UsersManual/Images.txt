@@ -1,0 +1,11 @@
+﻿.. |img-6|      image:: ../Images/typoscript.jpg
+.. :align: left
+.. :border: 0
+.. :name: Grafik4
+.. :width: 100%
+
+.. |img-7|      image:: ../Images/plugin.jpg
+.. :align: left
+.. :border: 0
+.. :name: Grafik5
+.. :width: 100%
