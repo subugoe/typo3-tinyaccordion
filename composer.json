@@ -1,0 +1,21 @@
+{
+    "name": "subugoe/tinyaccordion",
+    "description": "TYPO3 Accordion extension",
+    "type": "typo3-cms-extension",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Kurt Gusbeth",
+            "email": "info@quizpalme.de"
+        },
+        {
+            "name": "Ingo Pfennigstorf",
+            "email": "i.pfennigstorf@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Quizpalme\\Tinyaccordion\\": "Classes/"
+        }
+    }
+}
